@@ -17,16 +17,13 @@ public class Main {
 		String lastName = scan.next();
 		
 		int selectDepartment = 0;
-		System.out.println("Please enter the department from the following \n"
+		System.out.println("\nPlease enter the department from the following \n"
 				+ "1. Technical \n"
 				+ "2. Admin \n"
 				+ "3. Human Resource \n"
 				+ "4. Legal");
-		try {
-			selectDepartment = scan.nextInt();
-		} catch(RuntimeException re) {
-			System.out.println(re.getMessage());
-		}
+		
+		selectDepartment = scan.nextInt();
 		
 		scan.close();
 		

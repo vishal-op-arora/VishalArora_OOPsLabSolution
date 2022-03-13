@@ -24,7 +24,6 @@ public abstract class CredentialService {
 		 * Considering the password length is 8
 		 * Which contain two uppercase chars, two lowercase chars, two numbers and two special chars
 		 */
-		
 		for(int i=0; i< 8 ; i++) {
 			int randomNumber = 0;
 			if( 0 <= i && i <= 1) {
@@ -48,6 +47,7 @@ public abstract class CredentialService {
 		return shuffleStringChars(sb);
 	}
 	
+	
 	public static final void showCredentials(Employee employee) {
 		System.out.println();
 		System.out.println("Dear " + employee.getFirstname() + " your generated credentials are as follows");
@@ -55,16 +55,16 @@ public abstract class CredentialService {
 		System.out.println("Password --->  " + employee.getPassword());
 	}	
 	
+	
 	public static String shuffleStringChars(StringBuilder inputString){
-        
-        StringBuilder outputString = new StringBuilder();       
-        Random random = new Random();
-        
-        while(inputString.length() != 0 ){
-            int randPicker = random.nextInt(inputString.length());
-            outputString.append(inputString.charAt(randPicker));
-            inputString.deleteCharAt(randPicker);
-        }
-        return outputString.toString();
+		StringBuilder outputString = new StringBuilder();       
+		Random random = new Random();
+		
+		while(inputString.length() != 0 ){
+		    int randPicker = random.nextInt(inputString.length());
+		    outputString.append(inputString.charAt(randPicker));
+		    inputString.deleteCharAt(randPicker);
+		}
+		return outputString.toString();
     }
 }
