@@ -30,16 +30,15 @@ public abstract class CredentialService {
 				randomNumber = random.nextInt(upperChars.length());
 				sb.append(upperChars.charAt(randomNumber));
 			}
-			if( 2 <= i && i <= 3) {
+			else if( 2 <= i && i <= 3) {
 				randomNumber = random.nextInt(lowerChars.length());
 				sb.append(lowerChars.charAt(randomNumber));
 			}
-			
-			if( 4 <= i && i <= 5) {
+			else if( 4 <= i && i <= 5) {
 				randomNumber = random.nextInt(numChars.length());
 				sb.append(numChars.charAt(randomNumber));
 			}
-			if( 6 <= i && i <= 7) {
+			else{
 				randomNumber = random.nextInt(specialChars.length());
 				sb.append(specialChars.charAt(randomNumber));
 			}
@@ -64,6 +63,7 @@ public abstract class CredentialService {
 		    int randPicker = random.nextInt(inputString.length());
 		    outputString.append(inputString.charAt(randPicker));
 		    inputString.deleteCharAt(randPicker);
+		    
 		}
 		return outputString.toString();
     }
